@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spoty</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="./spot.png">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.2.0/socket.io.min.js"></script>
+</head>
+<body>
+    <h3>Harmony</h3>
+    <input class="sb" type="search" placeholder="Type a song name...">
+    <h1>Songs youd like to listen to</h1>
+    <iframe class="music" src="https://open.spotify.com/embed/track/7LVHVU3tWfcxj5aiPFEW4Q?utm_source=generator"
+        width="300" height="400" frameBorder="0" allowfullscreen=""
+        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy">
+
+    </iframe>
+    <iframe class="music1" style="border-radius:12px" src="https://open.spotify.com/embed/track/61DuXKQqvXkxcrAIiNLIgR?utm_source=generator" 
+    width="300" height="400" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+
+    <iframe class="music2" style="border-radius:12px" src="https://open.spotify.com/embed/track/1t2gvCG4jH1kYE9sX2PrRs?utm_source=generator"
+     width="300" height="400" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+     
+    <button class="open-button" onclick="openForm()"><h2>Chat</h2></button>
+    <div class="chat" id="myForm">
+        <div class="top"><h4 onclick="closeForm()">x</h4></div>
+        <input class="mess" type="text" id="messageInput" placeholder="Say something..."><span onclick="sendMessage()"
+            class="arr">&#10148</span>
+        <p class="message" id="ChatMessages"></p>
+    </div>
+    <script>
+        const socket = io('http://localhost:3000');
+        socket.on('message', (message) => {
+            const ChatMessages = document.getElementById('ChatMessages');
+            const p = document.createElement('p');
+            p.appendChild(document.createTextNode(message));
+            ChatMessages.appendChild(p);
+        });
+        function sendMessage() {
+            const messageInput = document.getElementById('messageInput');
+            socket.emit('message', messageInput.value); // Change 'message' to 'messageInput.value'
+            messageInput.value = '';
+        }
+
+        function openForm() {
+            document.getElementById("myForm").style.display = "block";
+        }
+
+        function closeForm() {
+            document.getElementById("myForm").style.display = "none";
+        }
+    </script>
+</body>
+
+</html>

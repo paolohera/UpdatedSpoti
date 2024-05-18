@@ -1,0 +1,130 @@
+@import url('https://fonts.cdnfonts.com/css/ballet');
+h3{
+    font-family: 'Ballet', sans-serif;
+    color: rgb(1, 247, 1);
+    position: fixed;
+    margin-left: 50px;
+    font-size: 50px;
+    margin-top: 5px;
+    
+}
+.music {
+    position: fixed;
+    margin-top: 13% ;
+    margin-left: 5%;
+}
+.music1 {
+    position: fixed;
+    margin-top: 13% ;
+    margin-left: 30%;
+}   
+.music2 {
+    position: fixed;
+    margin-top: 13% ;
+    margin-left: 55%;
+}  
+body {
+    background-color: rgb(0, 0, 0);
+}
+
+.sb {
+    position: fixed;
+    width: 250px;
+    height: 40px;
+    border-radius: 20px;
+    border: none;
+    padding-left: 15px;
+    font-weight: 400;
+    background-color: rgb(56, 56, 55);
+    margin-top: 30px;
+    color: white;
+    margin-left: 70%;
+    outline: 1px solid rgb(60, 255, 0);
+}
+
+h1 {
+    position: absolute;
+    color: white;
+    margin-top: 10%;
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-left: 5%;
+}
+
+.chat {
+    margin-top: 20%;
+    border-radius: 5px;
+    width: 349px;
+    height: 350px;
+    background-color: rgb(59, 59, 58);
+    position: fixed;
+    margin-left: 72%;
+    display: none;
+}
+
+.mess {
+    border: none;
+    width: 200px;
+    height: 40px;
+    position: absolute;
+    margin-left: 40px;
+    border-radius: 30px;
+    margin-top: 84%;
+    padding-left: 20px;
+}
+
+.arr {
+    color: rgb(255, 253, 253);
+    font-size: 40px;
+    position: absolute;
+    margin-top: 82%;
+    margin-left: 77%;
+    cursor: pointer;
+}
+
+.message {
+    display: block;
+}
+
+p {
+    color: white;
+    text-align: right;
+    padding-right: 15px;
+    padding: 5px 10px 0  0;
+    
+}
+.open-button {
+    background-color: #333333;
+    color: white;
+    height: 50px;
+    border: none;
+    cursor: pointer;
+    opacity: 0.8;
+    position: fixed;
+    bottom: 23px;
+    right: 28px;
+    width: 50px;
+    border-radius: 50%;
+    outline: 2px solid rgb(78, 240, 3);
+  }
+  h2{
+    font-size: 14px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+  }
+  .top{
+    width: 25.6%;
+    background-color: rgb(14, 248, 6);
+    height: 40px;
+    margin-top: -20px;
+    border-radius: 5px 5px 0px 0px;
+    position: inherit;
+  }
+  h4{
+    color: white;
+    font-size: 25px;
+    position: inherit;
+    margin-left: 23%;
+    margin-top: 5px;
+    font-family: cambria;
+    cursor: pointer;
+  }
